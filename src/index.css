@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-black antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans uppercase tracking-wider;
+  }
+}
+
+@layer components {
+  .hero-section {
+    @apply relative h-screen w-full overflow-hidden;
+  }
+  .hero-image {
+    @apply w-full h-full object-cover object-center transform scale-100 transition-transform duration-700 ease-out;
+  }
+  .hero-image:hover {
+    @apply scale-105;
+  }
+  .nav-link {
+    @apply text-black hover:text-gray-600 transition-colors duration-300 uppercase tracking-widest text-sm;
+  }
+  .product-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4;
+  }
+  .product-card {
+    @apply relative overflow-hidden cursor-pointer;
+  }
+  .product-image {
+    @apply w-full transition-transform duration-700 ease-out;
+  }
+  .product-card:hover .product-image {
+    @apply scale-105;
+  }
+}
