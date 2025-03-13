@@ -2,12 +2,12 @@ import React from 'react';
 
 const ProductCard = ({ painting }) => {
   return (
-    <div className="group relative">
-      <div className="aspect-h-4 aspect-w-3 overflow-hidden rounded-lg bg-gray-100">
+    <div className="group relative h-full">
+      <div className="overflow-hidden rounded-lg bg-gray-100">
         <img
           src={painting.imageUrl}
           alt={painting.title}
-          className="object-cover object-center transition-opacity group-hover:opacity-75"
+          className="w-full h-auto object-contain transition-opacity group-hover:opacity-75"
         />
       </div>
       <div className="mt-4 flex justify-between">

@@ -27,7 +27,7 @@
     @apply text-black hover:text-gray-600 transition-colors duration-300 uppercase tracking-widest text-sm;
   }
   .product-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
   }
   .product-card {
     @apply relative overflow-hidden cursor-pointer;
@@ -37,5 +37,16 @@
   }
   .product-card:hover .product-image {
     @apply scale-105;
+  }
+  
+  /* Masonry Grid Styles */
+  .masonry-grid {
+    @apply columns-1 sm:columns-2 lg:columns-3 gap-8;
+  }
+  .masonry-grid > div {
+    @apply mb-8 break-inside-avoid;
+  }
+  .masonry-grid img {
+    @apply w-full h-auto rounded-lg;
   }
 }
